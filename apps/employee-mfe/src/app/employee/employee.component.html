@@ -1,0 +1,20 @@
+<h1>EMployees List</h1>
+
+<div class="container">
+   <table class="table table-bordered table-striped">
+      <thead class="table-danger">
+          <tr>
+            <th>Emp No</th>
+            <th>Emp Name</th>
+            <th>Dept No</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employees$|async">
+            <td>{{emp.EmpNo}}</td>
+            <td>{{emp.EmpName}}</td>
+            <td>{{emp.DeptNo}}</td>
+        </tr>
+      </tbody>
+   </table>
+</div>

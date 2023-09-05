@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table table-bordered table-striped">
+     <thead class="table-dark">
+       <tr>
+         <th *ngFor="let column of columns">{{column}}</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let dept of departments$|async">
+          <td *ngFor="let column of columns">
+            {{dept[column]}}
+          </td>
+       </tr>
+     </tbody>
+  </table>
+</div>
